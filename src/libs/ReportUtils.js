@@ -628,7 +628,7 @@ function buildOptimisticReportAction(sequenceNumber, text, file) {
     const commentText = text.length < 10000 ? parser.replace(text) : text;
     const isAttachment = _.isEmpty(text) && file !== undefined;
     const attachmentInfo = isAttachment ? file : {};
-    const htmlForNewComment = isAttachment ? 'Uploading Attachment...' : commentText;
+    const htmlForNewComment = isAttachment ? Localize.translateLocal('reportActionCompose.uploadingAttachment') : commentText;
 
     // Remove HTML from text when applying optimistic offline comment
     const textForNewComment = isAttachment ? '[Attachment]'

@@ -186,6 +186,7 @@ export default {
         emoji: 'Emoji',
         collapse: 'Colapsar',
         expand: 'Expandir',
+        uploadingAttachment: 'Cargando archivo adjunto...'
     },
     reportActionContextMenu: {
         copyToClipboard: 'Copiar al portapapeles',
