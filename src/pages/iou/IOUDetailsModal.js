@@ -165,7 +165,11 @@ class IOUDetailsModal extends Component {
                         title={this.props.translate('common.details')}
                         onCloseButtonPress={Navigation.dismissModal}
                     />
-                    {this.props.iou.loading ? <ActivityIndicator color={themeColors.text} /> : (
+                    {this.props.iou.loading ? (
+                        <View style={[styles.flex1, styles.alignItemsCenter, styles.justifyContentCenter]}>
+                            <ActivityIndicator color={themeColors.text} />
+                        </View>
+                    ) : (
                         <View style={[styles.flex1, styles.justifyContentBetween]}>
                             <ScrollView contentContainerStyle={styles.iouDetailsContainer}>
                                 <IOUPreview
